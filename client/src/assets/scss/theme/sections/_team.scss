@@ -1,0 +1,27 @@
+.team {
+
+	.team-item-role {
+		color: get-color(primary, 2);
+	}
+}
+
+@include media( '>1005px' ) { // 1005px may need to e adjusted if testimonial items width or outer padding change
+	.team {
+
+		.tiles-wrap {
+			padding-bottom: 64px;
+		}
+
+		.tiles-item {
+			position: relative;
+
+			&:nth-child(3n+1) {
+				top: 20px;
+			}
+
+			&:nth-child(3n+2) {
+				top: 64px;
+			}
+		}
+	}
+}

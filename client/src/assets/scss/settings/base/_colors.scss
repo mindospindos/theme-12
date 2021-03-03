@@ -1,0 +1,87 @@
+// Colors
+
+// The color palette
+$palette: (
+	light: (
+		1: #FFFFFF,
+		2: #FBFDFF,
+		3: #E5ECF4,
+		4: #D2DCE8
+	),
+	dark: (
+		1: #0B0D1A,
+		2: #202438,
+		3: #565E81,
+		4: #6F779A
+	),
+	primary: (
+		1: #007AE2,
+		2: #1694FF,
+		3: #005EAF,
+		4: #C8E6FF
+ 	),
+	secondary: (
+		1: #2E2AFF,
+		2: #605DFF,
+		3: #0500F6,
+		4: #E2E1FF
+	),
+	alert: (
+		error: #FC4C64,
+		warning: #FCAE4C,
+		success: #00E2BA
+	)
+);
+
+// Base typography: color
+$color: (
+	heading:				get-color(dark, 1),
+	base: 					get-color(dark, 3),
+	high-contrast: 			get-color(dark, 1),
+	mid-contrast: 			get-color(dark, 2),
+	low-contrast: 			get-color(dark, 4),
+	primary:				get-color(primary, 1),
+	secondary:				get-color(secondary, 1),
+	error:					get-color(alert, error),
+	warning:				get-color(alert, warning),
+	success:				get-color(alert, success),
+	// ↓ Inverted colors
+	heading-inverse:		get-color(light, 1),
+	base-inverse:			get-color(dark, 4),
+	high-contrast-inverse: 	get-color(light, 1),
+	mid-contrast-inverse: 	get-color(light, 2),
+	low-contrast-inverse: 	get-color(light, 4)
+);
+
+// Borders and dividers: color
+$border--color: (
+	divider:			get-color(light, 3),
+	divider-inverse:	rgba(get-color(dark, 4), .24)
+);
+
+// Icons: fill color
+$icon--color: (
+	hamburger:				get-color(dark, 2),			// hamburger icon
+	accordion:				get-color(primary, 1),		// accordion icon
+	social: 				get-color(primary, 1),		// social icons
+	social-hover: 			get-color(primary, 2),		// social icons (:hover)
+	modal:					get-color(dark, 2),			// modal icon
+	modal-hover:			get-color(dark, 1),			// modal icon (:hover)
+    news-more:			    get-color(primary, 2),		// news - read more link arrow    
+	// ↓ Inverted colors
+	hamburger-inverse:		get-color(light, 1),		// hamburger icon
+	accordion-inverse:		get-color(light, 1),		// accordion icon
+	social-inverse: 		null,						// social icons
+	social-hover-inverse: 	null						// social icons (:hover)
+);
+
+// Misc elements: background color
+$bg--color: (
+	body: 			get-color(light, 1),
+	body-shadow:	0 20px 48px rgba(get-color(dark, 1), .1),	// body shadow when a boxed layout is used (set to null if don't want a shadow)
+	body-outer:		get-color(light, 2),						// outer bg color when a boxed layout is used
+	bg-color: 		get-color(dark, 1),							// .has-bg-color helper class
+	shadow: 		0 24px 64px rgba(get-color(dark, 1), .32),	// .has-shadow helper class
+	code: 			get-color(light, 3),
+	code-inverse:	darken(get-color(dark, 1), 3%)
+);
